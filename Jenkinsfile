@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube analysis') {
     withSonarQubeEnv('LocalSonar') {
-      sh 'mvn clean package sonar:sonar'
+      sh './mvnw clean package sonar:sonar -Dsonar.host.url=http://localhost:9000'
     }
   }
 }
