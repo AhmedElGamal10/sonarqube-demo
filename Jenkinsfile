@@ -1,5 +1,5 @@
 node {
-  stage('SCM') {
+  stage('SC Checkout') {
     git 'https://github.com/AhmedElGamal10/sonarqube-demo.git'
   }
   stage('SonarQube analysis') {
